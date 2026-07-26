@@ -2,8 +2,8 @@
 
 Simulated cohort: n=3000, seed=2026 (see `simulate_confounded_cohort.py` for the full DGP).
 
-True hazard ratio (treatment): **0.65**  
-True risk ratio at 365 days (Monte Carlo, n=300,000): **0.7820**
+- True hazard ratio (treatment): **0.65**
+- True risk ratio at 365 days (Monte Carlo, n=300,000): **0.7820**
 
 The first three estimators target the hazard ratio and are directly comparable to each other and to the true HR. DoWhy has no native Cox estimator (see adr-0003) and instead targets the risk ratio at the fixed horizon above — comparable to the Monte Carlo true RR, but not on the same scale as the hazard-ratio rows.
 

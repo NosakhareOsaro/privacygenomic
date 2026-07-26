@@ -68,7 +68,8 @@ def build_province_grid(values: pd.Series, value_name: str = "value") -> gpd.Geo
     True
     """
     rows = []
-    for province, value in values.items():
+    for province_key, value in values.items():
+        province = str(province_key)
         if province not in GRID_POSITIONS:
             continue
         col, row = GRID_POSITIONS[province]

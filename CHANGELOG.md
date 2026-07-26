@@ -85,3 +85,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Indigenous-identity proxy — chosen over Power BI so reviewers without a
   Power BI license can run it. Data-preparation logic lives in
   `dashboards/data_prep.py`, unit tested separately from the UI script.
+
+### Changed
+
+- CI now lints/format-checks `data/`, `benchmark/`, and `dashboards/` in
+  addition to `src/` and `tests/`, and the test suite enforces an 85%
+  coverage floor (`--cov-fail-under=85`) — the current suite runs at
+  ~97%.
+- Verified Python 3.11 and 3.12 both install and pass the full suite
+  cleanly, and verified the whole check sequence (lint, format, mypy,
+  pytest) on a genuinely independent clone of `main`, not just the
+  working directory's cached environment.
+- `pre-commit`'s mypy hook no longer pulls in `pandas-stubs`/`types-PyYAML`,
+  which had drifted out of sync with what CI actually runs (`mypy src`
+  against this project's own dependencies) and was failing locally on
+  two real, now-fixed typing issues CI's looser check didn't catch —
+  the hook is now deliberately kept consistent with CI rather than
+  silently stricter.

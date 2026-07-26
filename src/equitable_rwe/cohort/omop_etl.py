@@ -55,7 +55,7 @@ _DATE_COLUMNS = {
 #: given file happens to be numeric-looking (e.g. ICD-9 "4019"), otherwise
 #: pandas silently infers an integer dtype and drops meaning like leading
 #: zeros, breaking any later exact-match concept mapping.
-_DTYPE_OVERRIDES: dict[str, dict[str, type]] = {
+_DTYPE_OVERRIDES: dict[str, dict[str, type[str]]] = {
     "diagnoses_icd": {"icd_code": str},
 }
 
