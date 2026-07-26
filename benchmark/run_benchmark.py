@@ -125,8 +125,8 @@ def _write_summary_markdown(results: pd.DataFrame, true_rr: float) -> str:
         f"Simulated cohort: n={N_SUBJECTS}, seed={SEED} "
         "(see `simulate_confounded_cohort.py` for the full DGP).",
         "",
-        f"True hazard ratio (treatment): **{TRUE_HR_TREATMENT}**  ",
-        f"True risk ratio at {HORIZON_DAYS:.0f} days (Monte Carlo, "
+        f"- True hazard ratio (treatment): **{TRUE_HR_TREATMENT}**",
+        f"- True risk ratio at {HORIZON_DAYS:.0f} days (Monte Carlo, "
         f"n=300,000): **{true_rr:.4f}**",
         "",
         "The first three estimators target the hazard ratio and are directly "

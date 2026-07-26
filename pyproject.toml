@@ -84,7 +84,7 @@ disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests", "src", "data", "benchmark", "dashboards"]
-addopts = "--doctest-modules --ignore=dashboards/equity_dashboard.py --cov=equitable_rwe --cov-report=term-missing"
+addopts = "--doctest-modules --ignore=dashboards/equity_dashboard.py --cov=equitable_rwe --cov-report=term-missing --cov-fail-under=85"
 
 [tool.coverage.run]
 source = ["src/equitable_rwe"]

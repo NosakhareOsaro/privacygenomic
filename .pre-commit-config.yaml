@@ -14,9 +14,13 @@ repos:
     rev: v1.11.2
     hooks:
       - id: mypy
-        additional_dependencies: [pandas-stubs, types-PyYAML]
+        # Deliberately no additional_dependencies (e.g. pandas-stubs):
+        # CI runs `mypy src` against this project's own dependencies only
+        # (see pyproject.toml's [tool.mypy]), and this hook is kept
+        # consistent with that rather than enforcing a stricter local
+        # check that CI doesn't also enforce.
         args: [--ignore-missing-imports]
-        exclude: ^(tests/|notebooks/|benchmark/)
+        exclude: ^(tests/|notebooks/|benchmark/|data/|dashboards/)
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
