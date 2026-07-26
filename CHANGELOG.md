@@ -53,3 +53,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   estimator's log-scale bias relative to the true hazard ratio by
   roughly half or more (see `benchmark/results/benchmark_summary.md`
   for the exact, generated numbers).
+- `equitable_rwe.ml`: an XGBoost 30-day readmission model
+  (`fit_readmission_model`) with SHAP explainability
+  (`explain_predictions`), deliberately excluding protected/proxy
+  attributes from its feature set — see
+  `data/synthetic/generate_readmission_cohort.py`.
+- `equitable_rwe.fairness`: an AEQUITAS-equivalent classifier audit
+  (`audit_fairness`: demographic parity via the four-fifths rule,
+  equalized odds, within-group calibration), reimplemented directly on
+  `numpy`/`pandas` rather than depending on the `aequitas` package, and
+  a causal-estimator subgroup reliability audit
+  (`audit_causal_subgroup_fairness`: per-subgroup effective sample size
+  and post-weighting covariate balance for a doubly-robust survival
+  estimate — a different, non-classifier notion of "fairness" that a
+  hazard ratio actually admits). See
+  `docs/architecture/adr-0004-fairness-and-ml-choices.md`.
+- `equitable_rwe.fit_equitable_survival_estimate`: this project's
+  headline API, combining the doubly-robust causal estimator with the
+  causal subgroup fairness audit in one call, returning both a causal
+  estimate and a fairness report.
