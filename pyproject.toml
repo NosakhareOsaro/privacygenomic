@@ -30,14 +30,20 @@ classifiers = [
 ]
 dependencies = [
     "dowhy>=0.14",
+    "folium>=0.20.0",
+    "geopandas>=1.1.4",
     "lifelines>=0.30.3",
+    "mapclassify>=2.10.0",
     "matplotlib>=3.11.1",
     "numpy>=1.26",
     "pandas>=2.1",
+    "plotly>=6.9.0",
     "pyarrow>=25.0.0",
     "scikit-learn>=1.9.0",
     "scipy>=1.11",
     "shap>=0.50.0",
+    "statsmodels>=0.14.6",
+    "streamlit>=1.59.1",
     "xgboost>=3.2.0",
 ]
 
@@ -77,8 +83,8 @@ warn_unused_ignores = true
 disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "src", "data", "benchmark"]
-addopts = "--doctest-modules --cov=equitable_rwe --cov-report=term-missing"
+testpaths = ["tests", "src", "data", "benchmark", "dashboards"]
+addopts = "--doctest-modules --ignore=dashboards/equity_dashboard.py --cov=equitable_rwe --cov-report=term-missing"
 
 [tool.coverage.run]
 source = ["src/equitable_rwe"]
