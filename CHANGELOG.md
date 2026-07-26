@@ -72,3 +72,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   headline API, combining the doubly-robust causal estimator with the
   causal subgroup fairness audit in one call, returning both a causal
   estimate and a fairness report.
+- `equitable_rwe.equity`: direct age standardization and Poisson rate
+  regression (`age_standardization.py`), and a simplified GIS choropleth
+  (`choropleth.py`) rendering provinces as a non-overlapping tile-grid
+  cartogram rather than asserting survey-accurate boundaries this
+  project has not sourced. See
+  `docs/architecture/adr-0005-equity-dashboard-choices.md`.
+- `dashboards/equity_dashboard.py`: an open-source (Streamlit + Plotly)
+  health-equity dashboard — age-standardized hospitalization rates by
+  remoteness, the provincial choropleth, stage-at-diagnosis and income
+  distributions by equity subgroup, and Kaplan-Meier curves by
+  Indigenous-identity proxy — chosen over Power BI so reviewers without a
+  Power BI license can run it. Data-preparation logic lives in
+  `dashboards/data_prep.py`, unit tested separately from the UI script.
