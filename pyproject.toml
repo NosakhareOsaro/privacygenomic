@@ -29,11 +29,13 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Bio-Informatics",
 ]
 dependencies = [
+    "dowhy>=0.14",
     "lifelines>=0.30.3",
     "matplotlib>=3.11.1",
     "numpy>=1.26",
     "pandas>=2.1",
     "pyarrow>=25.0.0",
+    "scikit-learn>=1.9.0",
     "scipy>=1.11",
 ]
 
@@ -73,7 +75,7 @@ warn_unused_ignores = true
 disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "src", "data"]
+testpaths = ["tests", "src", "data", "benchmark"]
 addopts = "--doctest-modules --cov=equitable_rwe --cov-report=term-missing"
 
 [tool.coverage.run]
