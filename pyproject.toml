@@ -31,6 +31,7 @@ classifiers = [
 dependencies = [
     "numpy>=1.26",
     "pandas>=2.1",
+    "pyarrow>=25.0.0",
     "scipy>=1.11",
 ]
 
@@ -70,7 +71,7 @@ warn_unused_ignores = true
 disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "src"]
+testpaths = ["tests", "src", "data"]
 addopts = "--doctest-modules --cov=equitable_rwe --cov-report=term-missing"
 
 [tool.coverage.run]
