@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "PrivacyGenomic: equitable_rwe — Real-World Evidence, Health Equity & Causal Outcomes Analytics Platform"
+type: software
+authors:
+  - family-names: Osaro
+    given-names: Nosakhare
+    email: osaronosakhare@gmail.com
+license: MIT
+repository-code: "https://github.com/NosakhareOsaro/privacygenomic"
+version: 0.1.0
+date-released: "2026-07-26"
+keywords:
+  - causal inference
+  - survival analysis
+  - health equity
+  - fairness auditing
+  - real-world evidence
+  - OMOP CDM

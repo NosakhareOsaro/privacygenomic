@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Docs build
+docs/_build/
+site/
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Data (real, non-synthetic — never committed)
+data/raw/
+data/interim/
+data/external/
+*.csv.gz
+!data/synthetic/**/*.csv
+
+# OS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Claude Code project files (not part of the deliverable)
+.claude/
