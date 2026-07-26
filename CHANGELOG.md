@@ -29,3 +29,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `docs/data-governance/ocap-and-privacy.md`: OCAP® principles and the
   rationale for using only synthetic and public-aggregate data throughout
   this project.
+- `equitable_rwe.survival`: Kaplan-Meier, Cox PH with a structured
+  Schoenfeld-residual proportional-hazards test, a from-scratch Fine-Gray
+  subdistribution hazard model (IPCW long-format construction on top of
+  `lifelines.CoxTimeVaryingFitter`, since lifelines does not ship
+  Fine-Gray) with an Aalen-Johansen cumulative incidence complement,
+  a Royston-Parmar-family flexible parametric model (AFT-scale, via
+  `lifelines.CRCSplineFitter`), landmark analysis, and bootstrap RMST
+  differences. See `docs/architecture/adr-0002-survival-model-choices.md`
+  for the trade-offs behind the Fine-Gray and Royston-Parmar
+  implementations.
