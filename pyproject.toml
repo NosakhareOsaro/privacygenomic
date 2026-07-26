@@ -70,8 +70,8 @@ warn_unused_ignores = true
 disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-addopts = "--cov=equitable_rwe --cov-report=term-missing"
+testpaths = ["tests", "src"]
+addopts = "--doctest-modules --cov=equitable_rwe --cov-report=term-missing"
 
 [tool.coverage.run]
 source = ["src/equitable_rwe"]
