@@ -85,6 +85,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Indigenous-identity proxy — chosen over Power BI so reviewers without a
   Power BI license can run it. Data-preparation logic lives in
   `dashboards/data_prep.py`, unit tested separately from the UI script.
+- Sphinx API reference site (`docs/source/`, Furo theme, autodoc +
+  napoleon for the NumPy-style docstrings throughout `src/equitable_rwe`,
+  MyST for Markdown support) — builds clean with warnings treated as
+  errors (`sphinx-build -W`), enforced by a `docs` CI job and by
+  `.readthedocs.yaml` (`fail_on_warning: true`).
+- JOSS-format paper draft (`paper/paper.md`, `paper/paper.bib`) — every
+  citation key used has a matching bibliography entry and vice versa
+  (verified programmatically, not just by eye). Not yet submitted to
+  JOSS; see `paper/README.md` for what's left.
+- `.zenodo.json` — Zenodo deposit metadata for a future GitHub release.
 
 ### Changed
 
@@ -102,16 +112,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   two real, now-fixed typing issues CI's looser check didn't catch —
   the hook is now deliberately kept consistent with CI rather than
   silently stricter.
-
-## Documentation and paper
-
-- Sphinx API reference site (`docs/source/`, Furo theme, autodoc +
-  napoleon for the NumPy-style docstrings throughout `src/equitable_rwe`,
-  MyST for Markdown support) — builds clean with warnings treated as
-  errors (`sphinx-build -W`), now enforced by a `docs` CI job and by
-  `.readthedocs.yaml` (`fail_on_warning: true`).
-- JOSS-format paper draft (`paper/paper.md`, `paper/paper.bib`) — every
-  citation key used has a matching bibliography entry and vice versa
-  (verified programmatically, not just by eye). Not yet submitted to
-  JOSS; see `paper/README.md` for what's left.
-- `.zenodo.json` — Zenodo deposit metadata for a future GitHub release.
+- Rewrote the top-level README with badges, a Mermaid architecture
+  diagram, a quickstart, the benchmark results table stated in plain
+  language, a repository-structure overview, and an explicit list of
+  what still needs a human account (PhysioNet, GitHub push, Zenodo,
+  ReadTheDocs, JOSS submission, Codecov).
