@@ -56,6 +56,12 @@ dev = [
     "mypy>=1.10",
     "pre-commit>=3.7",
 ]
+docs = [
+    "sphinx>=7.4",
+    "furo>=2024.8",
+    "myst-parser>=3.0",
+    "sphinx-copybutton>=0.5",
+]
 
 [project.urls]
 Homepage = "https://github.com/NosakhareOsaro/privacygenomic"
