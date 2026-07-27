@@ -1,0 +1,30 @@
+{
+  "title": "PrivacyGenomic: equitable_rwe -- Real-World Evidence, Health Equity & Causal Outcomes Analytics Platform",
+  "description": "A reproducible pipeline turning OMOP-CDM-formatted EHR data into causally valid, fairness-audited clinical outcome estimates and health-equity intelligence. Includes equitable_rwe (doubly-robust IPTW-adjusted Cox regression with integrated subgroup fairness auditing), a from-scratch Fine-Gray competing-risks implementation, a four-estimator causal-adjustment benchmark against a known ground truth, an AEQUITAS-equivalent fairness audit, and an open-source health-equity dashboard. Uses only synthetic and public-aggregate data; no real patient data is used anywhere.",
+  "creators": [
+    {
+      "name": "Osaro, Nosakhare",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "causal-inference",
+    "survival-analysis",
+    "health-equity",
+    "algorithmic-fairness",
+    "real-world-evidence",
+    "OMOP-CDM",
+    "epidemiology",
+    "Python"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/NosakhareOsaro/privacygenomic",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

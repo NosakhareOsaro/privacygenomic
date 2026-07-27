@@ -102,3 +102,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   two real, now-fixed typing issues CI's looser check didn't catch —
   the hook is now deliberately kept consistent with CI rather than
   silently stricter.
+
+## Documentation and paper
+
+- Sphinx API reference site (`docs/source/`, Furo theme, autodoc +
+  napoleon for the NumPy-style docstrings throughout `src/equitable_rwe`,
+  MyST for Markdown support) — builds clean with warnings treated as
+  errors (`sphinx-build -W`), now enforced by a `docs` CI job and by
+  `.readthedocs.yaml` (`fail_on_warning: true`).
+- JOSS-format paper draft (`paper/paper.md`, `paper/paper.bib`) — every
+  citation key used has a matching bibliography entry and vice versa
+  (verified programmatically, not just by eye). Not yet submitted to
+  JOSS; see `paper/README.md` for what's left.
+- `.zenodo.json` — Zenodo deposit metadata for a future GitHub release.
