@@ -3,8 +3,9 @@
   "description": "A reproducible pipeline turning OMOP-CDM-formatted EHR data into causally valid, fairness-audited clinical outcome estimates and health-equity intelligence. Includes equitable_rwe (doubly-robust IPTW-adjusted Cox regression with integrated subgroup fairness auditing), a from-scratch Fine-Gray competing-risks implementation, a four-estimator causal-adjustment benchmark against a known ground truth, an AEQUITAS-equivalent fairness audit, and an open-source health-equity dashboard. Uses only synthetic and public-aggregate data; no real patient data is used anywhere.",
   "creators": [
     {
-      "name": "Osaro, Nosakhare",
-      "affiliation": "Independent Researcher"
+      "name": "Osaro, Nosakhare Odionfo",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0004-9778-1161"
     }
   ],
   "license": "MIT",
