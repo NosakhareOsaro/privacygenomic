@@ -44,5 +44,3 @@ data/external/
 .vscode/
 .idea/
 
-# Claude Code project files (not part of the deliverable)
-.claude/
